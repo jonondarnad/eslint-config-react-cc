@@ -14,5 +14,48 @@ export default [
 		...pluginReact.configs.flat.recommended,
 		...pluginReact.configs.flat[ 'jsx-runtime' ],
 	},
+	{
+		rules: {
+			'react/jsx-child-element-spacing': 'error',
+			'react/jsx-closing-bracket-location': [ 'error', 'tag-aligned' ],
+			'react/jsx-closing-tag-location': 'error',
+			'react/jsx-curly-brace-presence': [ 'error', 'never' ],
+			'react/jsx-curly-newline': 'error',
+			'react/jsx-curly-spacing': [ 2, 'never' ],
+			'react/jsx-equals-spacing': [ 2, 'never' ],
+			'react/jsx-first-prop-new-line': [ 2, 'multiline' ],
+			'react/jsx-indent': [ 2, 'tab', {
+				indentLogicalExpressions: true
+			} ],
+			'react/jsx-indent-props': [ 'error', 'tab' ],
+			'react/jsx-max-props-per-line': [ 'error', {
+				maximum: {
+					multi: 1,
+					single: 3
+				}
+			} ],
+			'react/jsx-pascal-case': 'error',
+			'react/jsx-props-no-multi-spaces': 'error',
+			'jsx-quotes': [ 'error', 'prefer-single' ],
+			'react/self-closing-comp': [ 'error', {
+				component: true,
+				html: true
+			} ],
+			'react/jsx-tag-spacing': [ 'error', {
+				closingSlash: 'never',
+				beforeSelfClosing: 'allow',
+				afterOpening: 'never',
+				beforeClosing: 'never',
+			} ],
+			'react/jsx-wrap-multilines': [ 'error', {
+				declaration: 'parens-new-line',
+				assignment: 'parens-new-line',
+				return: 'parens-new-line',
+				arrow: 'parens-new-line',
+				condition: 'parens-new-line',
+				logical: 'parens-new-line',
+			} ],
+		}
+	},
 	...plugin
 ];
